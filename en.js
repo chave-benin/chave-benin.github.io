@@ -547,5 +547,7 @@ window.EN={
 "Ponctuels et rigoureux : nous arrivons à l'heure convenue et faisons exactement ce qui est prévu.":"Punctual and thorough: we arrive at the agreed time and do exactly what was planned.",
 "Vos lieux, vos objets et votre vie privée sont traités avec soin et confidentialité.":"Your premises, belongings and privacy are treated with care and confidentiality.",
 "Des agents formés, notre propre matériel et le bon produit pour chaque surface.":"Trained staff, our own equipment and the right product for every surface.",
-"Respect de vos espaces, de vos horaires et de chaque personne que nous croisons.":"Respect for your spaces, your schedule and everyone we meet."
+"Respect de vos espaces, de vos horaires et de chaque personne que nous croisons.":"Respect for your spaces, your schedule and everyone we meet.",
+"Quatre agents de l'équipe Chavé en polo CHAVE SARL":"Four members of the Chavé team in CHAVE SARL polo shirts",
+"L'équipe Chavé en polo CHAVE SARL":"The Chavé team in CHAVE SARL polo shirts"
 };

@@ -513,5 +513,12 @@ window.EN={
 "Votre satisfaction compte : si un point ne vous convient pas, signalez-le-nous et nous repassons.":"Your satisfaction matters: if something isn't right, let us know and we'll come back.",
 "Après travaux / déménagement":"Post-construction / moving",
 "Rapide":"Fast",
-"intervention en quelques heures":"service within a few hours"
+"intervention en quelques heures":"service within a few hours",
+"Agente d'entretien Chavé, souriante, avec son seau de produits":"Smiling Chavé cleaning agent with her bucket of products",
+"Bureaux propres":"Clean offices",
+"Lavage de vitres":"Window cleaning",
+"Équipe Chavé sur un chantier":"Chavé team on a building site",
+"L'équipe Chavé en intervention":"The Chavé team at work",
+"12 agents formés · Cotonou et environs":"12 trained staff · Cotonou and surroundings",
+"Chavé – Service d'entretien – La propreté qui fait la différence":"Chavé – Cleaning services – Cleanliness that makes the difference"
 };

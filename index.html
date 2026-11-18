@@ -287,13 +287,43 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
 .mbar a.wa{background:var(--wa);color:#063b1c}
 .mbar a.q{background:var(--navy);color:#fff}
 @media (min-width:900px){.mbar{display:none}}
-.fab{position:fixed;right:22px;bottom:22px;z-index:50;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:none;place-items:center;box-shadow:0 12px 28px rgba(37,211,102,.45);text-decoration:none;transition:transform .2s}
-.fab:hover{transform:scale(1.07)}
-.fab .i{width:32px;height:32px}
-.fab::after{content:"Une question ? Écrivez-nous";position:absolute;right:74px;white-space:nowrap;background:#fff;color:var(--ink);font-weight:700;font-size:.85rem;padding:9px 14px;border-radius:12px;box-shadow:var(--shadow);opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none}
-.fab:hover::after{opacity:1;transform:none}
-@media (min-width:900px){.fab{display:grid}}
-
+/* chat widget */
+.cbtn{position:fixed;right:16px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:55;width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(140deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(11,58,134,.4);transition:transform .2s}
+.cbtn:hover{transform:scale(1.06)}
+.cbtn .i{width:28px;height:28px}
+.cbtn .x{display:none}
+.cbtn[aria-expanded=true] .o{display:none}.cbtn[aria-expanded=true] .x{display:block}
+.cbtn .badge{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;background:#ff3b30;color:#fff;font:800 .7rem/18px var(--font);text-align:center;border:2px solid #fff}
+.tease{position:fixed;right:86px;bottom:calc(98px + env(safe-area-inset-bottom,0px));z-index:55;background:#fff;color:var(--ink);font-weight:600;font-size:.9rem;padding:11px 14px;border-radius:16px 16px 4px 16px;box-shadow:var(--shadow);max-width:230px;cursor:pointer;animation:pop .35s both}
+@media (min-width:900px){.cbtn{right:24px;bottom:24px;width:64px;height:64px}.tease{right:100px;bottom:36px}}
+.chat{position:fixed;right:12px;left:12px;bottom:calc(158px + env(safe-area-inset-bottom,0px));top:auto;z-index:56;height:min(540px,calc(100dvh - 240px));background:#fff;border-radius:24px;box-shadow:0 30px 70px rgba(13,27,51,.28);display:flex;flex-direction:column;overflow:hidden;transform-origin:bottom right;animation:cin .25s ease both}
+@keyframes cin{from{opacity:0;transform:translateY(12px) scale(.96)}}
+@media (min-width:600px){.chat{left:auto;width:380px}}
+@media (min-width:900px){.chat{right:24px;bottom:100px;height:min(580px,calc(100dvh - 130px))}}
+.chat .hd{display:flex;align-items:center;gap:12px;padding:14px 16px;background:linear-gradient(140deg,var(--navy),#1250b5);color:#fff}
+.chat .hd svg.lg{width:42px;height:42px;background:#fff;border-radius:13px;padding:3px;flex:none}
+.chat .hd b{display:block;font-size:1rem}
+.chat .hd small{display:flex;align-items:center;gap:6px;color:#cfe0ff;font-size:.78rem}
+.chat .hd small::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green-2)}
+.chat .hd button{margin-left:auto;background:rgba(255,255,255,.15);border:0;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.chat .bd{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg);overscroll-behavior:contain}
+.m{max-width:86%;padding:10px 14px;border-radius:18px;font-size:.93rem;line-height:1.45;animation:pop .25s both;white-space:pre-line}
+.m.b{background:#fff;border:1px solid var(--line);border-bottom-left-radius:6px;align-self:flex-start}
+.m.u{background:var(--blue);color:#fff;border-bottom-right-radius:6px;align-self:flex-end}
+.m .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;white-space:normal}
+.m .acts .btn{padding:8px 14px;font-size:.85rem}
+.typing{display:flex;gap:4px;padding:14px 16px}
+.typing i{width:7px;height:7px;border-radius:50%;background:#9aa7bd;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{transform:translateY(-4px);opacity:.5}}
+.qr{display:flex;gap:8px;overflow-x:auto;padding:10px 12px;border-top:1px solid var(--line);scrollbar-width:none;background:#fff}
+.qr::-webkit-scrollbar{display:none}
+.qr button{flex:none;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font:700 .82rem var(--font);color:var(--navy);cursor:pointer}
+.qr button:hover{border-color:var(--blue);background:var(--sky)}
+.chat form{display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.chat input{flex:1;min-width:0;font:500 16px var(--font);padding:12px 14px;border:1.5px solid var(--line);border-radius:999px}
+.chat input:focus{outline:0;border-color:var(--blue)}
+.chat form button{width:46px;height:46px;flex:none;border-radius:50%;border:0;background:var(--navy);color:#fff;cursor:pointer;display:grid;place-items:center}
 .toast{position:fixed;left:50%;bottom:100px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:600;font-size:.9rem;opacity:0;transition:all .3s;z-index:60;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
@@ -335,6 +365,8 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
     <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
     <symbol id="contact" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M8 17a4 4 0 0 1 8 0"/></symbol>
     <symbol id="truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.8A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="3"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
     <symbol id="share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></symbol>
   </defs>
 </svg>
@@ -639,7 +671,14 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
   <a class="wa" href="#" data-wa><svg class="i f"><use href="#wa"/></svg>WhatsApp</a>
   <a class="q" href="#devis"><svg class="i"><use href="#spark"/></svg>Devis express</a>
 </nav>
-<a class="fab" href="#" data-wa aria-label="Écrire à Chavé sur WhatsApp"><svg class="i f"><use href="#wa"/></svg></a>
+<button class="cbtn" id="cbtn" type="button" aria-expanded="false" aria-controls="chat" aria-label="Ouvrir la discussion"><svg class="i o"><use href="#i-chat"/></svg><svg class="i x"><use href="#close"/></svg><span class="badge" id="cbadge">1</span></button>
+<div class="tease" id="tease" hidden>Bonjour 👋 Une question sur nos services ? Je réponds tout de suite.</div>
+<div class="chat" id="chat" role="dialog" aria-label="Discussion avec Chavé" hidden>
+  <div class="hd"><svg class="lg" aria-hidden="true"><use href="#logo"/></svg><div><b>Chavé</b><small>Assistant · réponse immédiate</small></div><button type="button" id="cclose" aria-label="Fermer la discussion"><svg class="i"><use href="#close"/></svg></button></div>
+  <div class="bd" id="cbody" aria-live="polite"></div>
+  <div class="qr" id="cqr"></div>
+  <form id="cform" autocomplete="off"><label class="sr" for="cin">Votre message</label><input id="cin" placeholder="Écrivez votre question…" enterkeyhint="send"><button type="submit" aria-label="Envoyer"><svg class="i"><use href="#arrow"/></svg></button></form>
+</div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -794,6 +833,44 @@ $("#share").addEventListener("click",function(){
   else{window.open(waLink(d.text+" — "+d.url),"_blank","noopener")}
 });
 
+
+/* chat assistant */
+(function(){
+var btn=$("#cbtn"),box=$("#chat"),body=$("#cbody"),qr=$("#cqr"),form=$("#cform"),inp=$("#cin"),tease=$("#tease"),started=false,lastQ="";
+var KB={
+ devis:{l:"📝 Un devis",a:"Avec plaisir ! Le plus rapide, c'est notre devis express : en 1 minute vous décrivez votre lieu et votre besoin, et la demande arrive complète chez nous.\n\nVous pouvez aussi me décrire votre besoin ici, je le transmets à l'équipe.",x:[["Faire mon devis express","#devis"]]},
+ services:{l:"🧽 Vos services",a:"Nous proposons :\n• Nettoyage de bureaux et locaux professionnels\n• Entretien de maisons et appartements\n• Nettoyage après travaux ou déménagement\n• Lavage de vitres et surfaces vitrées\n• Entretien régulier ou ponctuel\n\nUn besoin particulier ? Décrivez-le, nous trouvons une solution.",x:[["Voir le détail","#services"]]},
+ prix:{l:"💰 Vos tarifs",a:"Chaque espace est différent : le prix dépend de la surface, de l'état du lieu et de la fréquence. C'est pourquoi nous faisons un devis personnalisé, gratuit et sans engagement, avant toute intervention.",x:[["Obtenir mon prix","#devis"]]},
+ produits:{l:"🧴 Produits & matériel",a:"Notre équipe vient avec son matériel et ses produits professionnels, adaptés à chaque surface. Si vous préférez vos propres produits (allergies, préférences), dites-le-nous simplement."},
+ zone:{l:"📍 Zones & horaires",a:"Indiquez-nous votre ville et votre quartier, ainsi que le jour souhaité : nous vous confirmons rapidement la disponibilité. Pour les entreprises, nous pouvons intervenir tôt le matin, le soir ou le week-end."},
+ regulier:{l:"📅 Contrat régulier",a:"Oui ! Quotidien, plusieurs fois par semaine, hebdomadaire ou mensuel : le planning s'adapte à vos horaires et peut évoluer selon vos besoins."},
+ humain:{l:"👤 Parler à quelqu'un",a:"Bien sûr ! Écrivez-nous directement sur WhatsApp ou appelez-nous, un membre de l'équipe vous répond.",x:[["WhatsApp","wa"],["Appeler","tel"]]}
+};
+var RX=[[/devis|estimation|estimer|cotation/i,"devis"],[/prix|tarif|combien|co[uû]t|cher|fcfa|budget/i,"prix"],[/produit|mat[ée]riel|aspirateur|allerg/i,"produits"],[/zone|quartier|ville|o[uù] |horaire|heure|dimanche|samedi|week|soir|dispo|quand/i,"zone"],[/r[ée]gulier|contrat|chaque semaine|mensuel|abonnement|quotidien/i,"regulier"],[/service|bureau|maison|appart|vitre|travaux|chantier|d[ée]m[ée]nag|nettoy/i,"services"],[/humain|quelqu|personne|appeler|t[ée]l[ée]phone|conseiller|whatsapp/i,"humain"]];
+function scroll(){body.scrollTop=body.scrollHeight}
+function add(txt,who,acts){var m=document.createElement("div");m.className="m "+who;m.textContent=txt;
+  if(acts&&acts.length){var a=document.createElement("div");a.className="acts";acts.forEach(function(x){var e=document.createElement("a");e.className="btn sm "+(x[1]==="wa"?"wa":"p");e.textContent=x[0];
+    if(x[1]==="wa"){e.href=waLink(x[2]||DEFAULT_WA);e.target="_blank";e.rel="noopener"}else if(x[1]==="tel"){e.href="tel:"+TEL}else{e.href=x[1];e.addEventListener("click",close)}a.appendChild(e)});m.appendChild(a)}
+  body.appendChild(m);scroll()}
+function bot(txt,acts,cb){var t=document.createElement("div");t.className="m b typing";t.innerHTML="<i></i><i></i><i></i>";body.appendChild(t);scroll();
+  setTimeout(function(){t.remove();add(txt,"b",acts);cb&&cb()},reduce?0:Math.min(1400,500+txt.length*6))}
+function chips(){qr.innerHTML="";Object.keys(KB).forEach(function(k){var b=document.createElement("button");b.type="button";b.textContent=KB[k].l;b.onclick=function(){ask(KB[k].l,k)};qr.appendChild(b)})}
+function ask(label,k){add(label,"u");var e=KB[k];bot(e.a,e.x)}
+function free(t){add(t,"u");lastQ=t;var k=null;for(var i=0;i<RX.length;i++){if(RX[i][0].test(t)){k=RX[i][1];break}}
+  var msg="Bonjour Chavé 👋\n"+t;
+  if(k&&k!=="humain"){var e=KB[k];bot(e.a,(e.x||[]).concat([["Envoyer ma question à l'équipe","wa",msg]]))}
+  else bot("Merci pour votre message ! Je le transmets à l'équipe sur WhatsApp pour une réponse personnalisée. Appuyez sur le bouton ci-dessous, votre message est déjà rédigé.",[["Envoyer sur WhatsApp","wa",msg],["Appeler","tel"]])}
+function open(){box.hidden=false;btn.setAttribute("aria-expanded","true");btn.setAttribute("aria-label","Fermer la discussion");tease.hidden=true;$("#cbadge").hidden=true;
+  if(!started){started=true;chips();var h=new Date().getHours();bot((h<12?"Bonjour":h<18?"Bonjour":"Bonsoir")+" 👋 Je suis l'assistant Chavé.\nComment puis-je vous aider ? Choisissez un sujet ci-dessous ou écrivez votre question.")}
+  if(window.matchMedia("(min-width:900px)").matches)setTimeout(function(){inp.focus()},300)}
+function close(){box.hidden=true;btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-label","Ouvrir la discussion")}
+btn.addEventListener("click",function(){box.hidden?open():close()});
+$("#cclose").addEventListener("click",close);
+tease.addEventListener("click",open);
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!box.hidden){close();btn.focus()}});
+form.addEventListener("submit",function(e){e.preventDefault();var t=inp.value.trim();if(!t)return;inp.value="";free(t)});
+setTimeout(function(){if(!started&&box.hidden){tease.hidden=false;setTimeout(function(){tease.hidden=true},9000)}},6000);
+})();
 /* reveal on scroll */
 if("IntersectionObserver" in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});$$(".rv").forEach(function(el){io.observe(el)})}
 else $$(".rv").forEach(function(el){el.classList.add("in")});

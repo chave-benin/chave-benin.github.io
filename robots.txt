@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://chave-benin.github.io/sitemap.xml
+Disallow: /

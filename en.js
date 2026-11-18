@@ -535,5 +535,6 @@ window.EN={
 "Attestations complètes disponibles sur demande.":"Full certificates available on request.",
 "Nous écrire →":"Message us →",
 "Chavé sur TikTok":"Chavé on TikTok",
-"Chavé sur Instagram":"Chavé on Instagram"
+"Chavé sur Instagram":"Chavé on Instagram",
+"Chavé sur Facebook":"Chavé on Facebook"
 };

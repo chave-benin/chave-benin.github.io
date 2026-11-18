@@ -1,5 +1,5 @@
 /* Chavé – cache hors connexion. Changer VERSION à chaque mise à jour importante. */
-var VERSION="chave-v4";
+var VERSION="chave-v5";
 var CORE=["./","index.html","en.js","favicon.png","img/logo-mark.webp","img/logo-mot.webp","img/agent-chave.webp","fonts/jakarta-latin.woff2","fonts/jakarta-latin-ext.woff2","icons/icon-192.png","mentions-legales.html","confidentialite.html"];
 self.addEventListener("install",function(e){e.waitUntil(caches.open(VERSION).then(function(c){return c.addAll(CORE)}).then(function(){return self.skipWaiting()}))});
 self.addEventListener("activate",function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==VERSION}).map(function(k){return caches.delete(k)}))}).then(function(){return self.clients.claim()}))});

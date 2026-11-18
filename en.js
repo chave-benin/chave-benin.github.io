@@ -536,5 +536,16 @@ window.EN={
 "Nous écrire →":"Message us →",
 "Chavé sur TikTok":"Chavé on TikTok",
 "Chavé sur Instagram":"Chavé on Instagram",
-"Chavé sur Facebook":"Chavé on Facebook"
+"Chavé sur Facebook":"Chavé on Facebook",
+"Derrière chaque espace impeccable, une équipe engagée":"Behind every spotless space, a committed team",
+"Professionnels, formés et à votre service.":"Professional, trained and at your service.",
+"L'équipe Chavé en tenue, gants bleus et produits en main":"The Chavé team in uniform, with blue gloves and cleaning products",
+"Sérieux":"Reliability",
+"Discrétion":"Discretion",
+"Efficacité":"Efficiency",
+"Respect":"Respect",
+"Ponctuels et rigoureux : nous arrivons à l'heure convenue et faisons exactement ce qui est prévu.":"Punctual and thorough: we arrive at the agreed time and do exactly what was planned.",
+"Vos lieux, vos objets et votre vie privée sont traités avec soin et confidentialité.":"Your premises, belongings and privacy are treated with care and confidentiality.",
+"Des agents formés, notre propre matériel et le bon produit pour chaque surface.":"Trained staff, our own equipment and the right product for every surface.",
+"Respect de vos espaces, de vos horaires et de chaque personne que nous croisons.":"Respect for your spaces, your schedule and everyone we meet."
 };

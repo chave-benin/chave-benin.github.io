@@ -414,6 +414,12 @@ footer .legal{display:flex;gap:16px}
 .fsoc{display:flex;gap:10px;margin-top:14px}
 .fsoc a{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;color:#fff}
 .fsoc a:hover{background:rgba(255,255,255,.2)}
+/* team */
+.team{margin:0 0 18px;border-radius:28px;overflow:hidden;position:relative;box-shadow:var(--shadow);background:#eef3f8}
+.team img{display:block;width:100%;height:auto;aspect-ratio:1000/478;object-fit:cover}
+@media (max-width:600px){.team figcaption{display:none!important}}
+.team figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-around;flex-wrap:wrap;gap:6px 14px;padding:40px 14px 14px;background:linear-gradient(transparent,rgba(11,58,134,.92) 55%);color:#fff;font-weight:800;font-size:clamp(.78rem,2vw,1rem);letter-spacing:.08em;text-transform:uppercase}
+.vals{grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}
 /* chat widget */
 .cbtn{position:fixed;right:16px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:55;width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(140deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(11,58,134,.4);transition:transform .2s}
 .cbtn:hover{transform:scale(1.06)}
@@ -776,23 +782,18 @@ footer .legal{display:flex;gap:16px}
 </section>
 
 <section>
-  <div class="w prom">
-    <div>
-      <div class="sh rv" style="margin-bottom:26px">
-        <span class="kick">Nos engagements</span>
-        <h2>La propreté qui fait la différence</h2>
-      </div>
-      <div class="pl">
-        <div class="pi rv"><span class="ic c-b"><svg class="i"><use href="#clock"/></svg></span><div><b>Ponctualité</b><p>Nous arrivons à l'heure convenue et respectons la durée annoncée.</p></div></div>
-        <div class="pi rv"><span class="ic c-g"><svg class="i"><use href="#leaf"/></svg></span><div><b>Produits adaptés</b><p>Le bon produit pour chaque surface : carrelage, bois, vitres, inox, tissus.</p></div></div>
-        <div class="pi rv"><span class="ic c-v"><svg class="i"><use href="#eye"/></svg></span><div><b>Discrétion &amp; respect</b><p>Vos lieux, vos objets et votre vie privée sont traités avec soin.</p></div></div>
-        <div class="pi rv"><span class="ic c-o"><svg class="i"><use href="#users"/></svg></span><div><b>Équipe formée</b><p>Des agents formés aux bons gestes et à l'utilisation du matériel professionnel.</p></div></div>
-      </div>
+  <div class="w">
+    <div class="sh rv">
+      <span class="kick">Nos engagements</span>
+      <h2>Derrière chaque espace impeccable, une équipe engagée</h2>
+      <p>Professionnels, formés et à votre service.</p>
     </div>
-    <div class="quote rv">
-      <div class="big">« Un espace propre, c'est un esprit libre, une équipe motivée et des clients bien accueillis. »</div>
-      <p>Chez Chavé, chaque intervention est faite comme si c'était chez nous. C'est ça, la différence.</p>
-      <div class="sig"><img src="img/logo-mark.webp" alt="" width="46" height="46" loading="lazy"><span>L'équipe Chavé</span></div>
+    <figure class="team rv"><img src="img/equipe-chave.webp" alt="L'équipe Chavé en tenue, gants bleus et produits en main" width="1000" height="478" loading="lazy"><figcaption><span>Sérieux</span><span>Discrétion</span><span>Efficacité</span><span>Respect</span></figcaption></figure>
+    <div class="pl vals">
+      <div class="pi rv"><span class="ic c-b"><svg class="i"><use href="#shield"/></svg></span><div><b>Sérieux</b><p>Ponctuels et rigoureux : nous arrivons à l'heure convenue et faisons exactement ce qui est prévu.</p></div></div>
+      <div class="pi rv"><span class="ic c-v"><svg class="i"><use href="#eye"/></svg></span><div><b>Discrétion</b><p>Vos lieux, vos objets et votre vie privée sont traités avec soin et confidentialité.</p></div></div>
+      <div class="pi rv"><span class="ic c-g"><svg class="i"><use href="#spark"/></svg></span><div><b>Efficacité</b><p>Des agents formés, notre propre matériel et le bon produit pour chaque surface.</p></div></div>
+      <div class="pi rv"><span class="ic c-o"><svg class="i"><use href="#users"/></svg></span><div><b>Respect</b><p>Respect de vos espaces, de vos horaires et de chaque personne que nous croisons.</p></div></div>
     </div>
   </div>
 </section>

@@ -549,5 +549,15 @@ window.EN={
 "Des agents formés, notre propre matériel et le bon produit pour chaque surface.":"Trained staff, our own equipment and the right product for every surface.",
 "Respect de vos espaces, de vos horaires et de chaque personne que nous croisons.":"Respect for your spaces, your schedule and everyone we meet.",
 "Quatre agents de l'équipe Chavé en polo CHAVE SARL":"Four members of the Chavé team in CHAVE SARL polo shirts",
-"L'équipe Chavé en polo CHAVE SARL":"The Chavé team in CHAVE SARL polo shirts"
+"L'équipe Chavé en polo CHAVE SARL":"The Chavé team in CHAVE SARL polo shirts",
+"De vrais chantiers, réalisés par notre équipe.":"Real jobs, done by our team.",
+"Salon – grand nettoyage":"Living room – deep clean",
+"Sols, taches et débris":"Floors, stains and debris",
+"Cuisine – remise en état":"Kitchen – full restoration",
+"Carrelage, évier et sols":"Tiles, sink and floors",
+"L'équipe en action":"Our team at work",
+"Agent Chavé raclant l'eau sale d'un sol carrelé":"Chavé agent squeegeeing dirty water off a tiled floor",
+"Deux agents Chavé roulant un tapis avant le nettoyage":"Two Chavé agents rolling up a rug before cleaning",
+"Agents Chavé remettant un tapis en place dans un salon propre":"Chavé agents putting a rug back in a clean living room",
+"Agent Chavé nettoyant les hauteurs d'une cuisine":"Chavé agent cleaning high areas of a kitchen"
 };

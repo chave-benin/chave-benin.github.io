@@ -420,6 +420,22 @@ footer .legal{display:flex;gap:16px}
 @media (max-width:600px){.team figcaption{display:none!important}}
 .team figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-around;flex-wrap:wrap;gap:6px 14px;padding:40px 14px 14px;background:linear-gradient(transparent,rgba(11,58,134,.92) 55%);color:#fff;font-weight:800;font-size:clamp(.78rem,2vw,1rem);letter-spacing:.08em;text-transform:uppercase}
 .vals{grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}
+/* before/after pairs + action */
+.gal{grid-template-columns:1fr}
+@media (min-width:900px){.gal{grid-template-columns:1fr 1fr}}
+.pair{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
+.pi2{position:relative;aspect-ratio:1/1;overflow:hidden}
+.pi2 img{display:block;width:100%;height:100%;object-fit:cover}
+.pi2 .lab{position:absolute;top:10px;left:10px;font:800 .7rem var(--font);letter-spacing:.08em;padding:5px 10px;border-radius:999px;background:rgba(13,27,51,.78);color:#fff}
+.pi2 .lab.r{background:var(--green)}
+.pair figcaption{padding:14px 18px;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.pair figcaption small{color:var(--muted);font-weight:500}
+.act-t{margin:36px 0 14px;color:var(--navy);font-size:1.3rem}
+.actg{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:800px){.actg{grid-template-columns:repeat(4,1fr)}}
+.actg figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:3/4;background:#eef3f8}
+.actg img{display:block;width:100%;height:100%;object-fit:cover}
 /* chat widget */
 .cbtn{position:fixed;right:16px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:55;width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(140deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(11,58,134,.4);transition:transform .2s}
 .cbtn:hover{transform:scale(1.06)}
@@ -827,18 +843,25 @@ footer .legal{display:flex;gap:16px}
   </div>
 </section>
 
-<section id="realisations" hidden>
+<section id="realisations">
   <div class="w">
     <div class="sh rv">
       <span class="kick">Nos réalisations</span>
       <h2>Avant / après : jugez par vous-même</h2>
-      <p>Faites glisser le curseur pour voir la différence.</p>
+      <p>De vrais chantiers, réalisés par notre équipe.</p>
     </div>
     <div class="gal" id="gal"></div>
+    <h3 class="act-t rv">L'équipe en action</h3>
+    <div class="actg">
+      <figure class="rv"><img src="img/action-sol.webp" alt="Agent Chavé raclant l'eau sale d'un sol carrelé" width="591" height="788" loading="lazy"></figure>
+      <figure class="rv"><img src="img/action-tapis.webp" alt="Deux agents Chavé roulant un tapis avant le nettoyage" width="591" height="788" loading="lazy"></figure>
+      <figure class="rv"><img src="img/action-salon.webp" alt="Agents Chavé remettant un tapis en place dans un salon propre" width="591" height="788" loading="lazy"></figure>
+      <figure class="rv"><img src="img/action-cuisine.webp" alt="Agent Chavé nettoyant les hauteurs d'une cuisine" width="499" height="665" loading="lazy"></figure>
+    </div>
   </div>
 </section>
 
-<section id="avis" class="alt" hidden>
+<section id="avis" hidden>
   <div class="w">
     <div class="sh c rv">
       <span class="kick">Avis clients</span>
@@ -848,7 +871,7 @@ footer .legal{display:flex;gap:16px}
   </div>
 </section>
 
-<section id="faq">
+<section id="faq" class="alt">
   <div class="w">
     <div class="sh c rv">
       <span class="kick">Questions fréquentes</span>
@@ -870,7 +893,7 @@ footer .legal{display:flex;gap:16px}
   </div>
 </section>
 
-<section id="recrutement" class="alt">
+<section id="recrutement">
   <div class="w rec">
     <div class="rv">
       <div class="sh" style="margin-bottom:22px">
@@ -904,7 +927,7 @@ footer .legal{display:flex;gap:16px}
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="alt">
   <div class="w">
     <div class="sh rv">
       <span class="kick">Contact</span>
@@ -972,7 +995,10 @@ var COUNTRIES={
   bj:{fr:"Bénin",en:"Benin",flag:"🇧🇯",wa:"2290196629995",waTxt:"01 96 62 99 95",tel:"+2290162185982",telTxt:"01 62 18 59 82",ex:"Fidjrossè, Akpakpa…",tz:"Africa/Porto-Novo"}
 };
 /* Galerie avant/après : {titre:"Bureaux – Cotonou", lieu:"Open space", avant:"img/avant-1.jpg", apres:"img/apres-1.jpg"} */
-var GALLERY=[];
+var GALLERY=[
+  {titre:"Salon – grand nettoyage",lieu:"Sols, taches et débris",avant:"img/salon-avant.webp",apres:"img/salon-apres.webp"},
+  {titre:"Cuisine – remise en état",lieu:"Carrelage, évier et sols",avant:"img/cuisine-avant.webp",apres:"img/cuisine-apres.webp"}
+];
 /* Avis clients : {nom:"Aïcha", lieu:"Cotonou", texte:"…", note:5} */
 var REVIEWS=[];
 /* ===================================================================== */
@@ -1167,14 +1193,11 @@ $("#rf").addEventListener("submit",function(e){
 
 /* gallery & reviews */
 (function(){
-  var items=GALLERY.length?GALLERY:(DEMO?[{titre:"Exemple – bureaux",lieu:"Photo à venir"},{titre:"Exemple – après travaux",lieu:"Photo à venir"}]:[]);
-  if(items.length){
-    var sec=$("#realisations");sec.hidden=false;
-    $("#gal").innerHTML=(GALLERY.length?"":'<p class="demo-note">'+T("Aperçu : les vraies photos avant / après seront ajoutées ici.")+'</p>')+items.map(function(it){
-      var b=it.avant?'<img src="'+esc(it.avant)+'" alt="'+esc(T("Avant")+" – "+it.titre)+'" loading="lazy">':'<div class="ph-b ph-t">'+T("Photo avant")+'</div>';
-      var a=it.apres?'<img class="af" src="'+esc(it.apres)+'" alt="'+esc(T("Après")+" – "+it.titre)+'" loading="lazy">':'<div class="af ph-a ph-t">'+T("Photo après")+'</div>';
-      return '<figure class="ba-card rv in" style="margin:0"><div class="ba">'+b+a+'<span class="lab l">'+T("AVANT")+'</span><span class="lab r">'+T("APRÈS")+'</span><span class="hd"></span><input type="range" min="0" max="100" value="50" aria-label="'+esc(T("Comparer avant et après"))+'"></div><figcaption>'+esc(T(it.titre))+'<small>'+esc(T(it.lieu||""))+'</small></figcaption></figure>'}).join("");
-    $$("#gal .ba input").forEach(function(r){r.addEventListener("input",function(){r.parentNode.style.setProperty("--p",r.value+"%")})});
+  if(GALLERY.length){
+    $("#realisations").hidden=false;
+    $("#gal").innerHTML=GALLERY.map(function(it){
+      var t=T(it.titre);
+      return '<figure class="pair rv in"><div class="pr"><div class="pi2"><img src="'+esc(it.avant)+'" alt="'+esc(T("Avant")+" – "+t)+'" width="560" height="560" loading="lazy"><span class="lab l">'+T("AVANT")+'</span></div><div class="pi2"><img src="'+esc(it.apres)+'" alt="'+esc(T("Après")+" – "+t)+'" width="560" height="560" loading="lazy"><span class="lab r">'+T("APRÈS")+'</span></div></div><figcaption>'+esc(t)+'<small>'+esc(T(it.lieu||""))+'</small></figcaption></figure>'}).join("");
   }
   var rv=REVIEWS.length?REVIEWS:(DEMO?[{nom:"Prénom du client",lieu:"Quartier",texte:"Ici s'affichera un véritable avis client.",note:5,ph:1},{nom:"Entreprise cliente",lieu:"Ville",texte:"Ici s'affichera un véritable avis client.",note:5,ph:1},{nom:"Prénom du client",lieu:"Quartier",texte:"Ici s'affichera un véritable avis client.",note:5,ph:1}]:[]);
   if(rv.length){$("#avis").hidden=false;$("#revs").innerHTML=rv.map(function(r){return '<div class="rev rv in'+(r.ph?" ph":"")+'"><span class="stars" aria-label="'+r.note+'/5">'+"★★★★★".slice(0,r.note||5)+'</span><p>« '+esc(T(r.texte))+' »</p><div><b>'+esc(T(r.nom))+'</b><small>'+esc(T(r.lieu))+'</small></div></div>'}).join("")}

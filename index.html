@@ -14,12 +14,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chavé">
+<link rel="preload" href="fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HouseCleaningService","name":"Chavé","alternateName":"Chavé – Service d'entretien","slogan":"La propreté qui fait la différence","description":"Service d'entretien et de nettoyage : bureaux et locaux professionnels, maisons et appartements, après travaux ou déménagement, vitres et surfaces vitrées, entretien régulier ou ponctuel.","email":"pro.contact.chave@gmail.com","telephone":"+2290162185982","contactPoint":[{"@type":"ContactPoint","telephone":"+2290196629995","contactType":"customer service","availableLanguage":["French"],"name":"WhatsApp"},{"@type":"ContactPoint","telephone":"+2290162185982","contactType":"customer service","availableLanguage":["French"],"name":"Appel direct"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Services de nettoyage","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nettoyage de bureaux et locaux professionnels"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Entretien de maison et appartements"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nettoyage après travaux ou déménagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Lavage de vitres et surfaces vitrées"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Entretien régulier ou ponctuel"}}]}}</script>
 <style>
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/jakarta-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/jakarta-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{
   --navy:#0b3a86; --blue:#1463d6; --sky:#e8f1ff; --green:#159a4b; --green-2:#1fbf62; --mint:#e7f7ee;
   --ink:#0d1b33; --muted:#5a6780; --line:#e3e9f2; --bg:#f7fafc; --card:#ffffff;
@@ -287,6 +290,53 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
 .mbar a.wa{background:var(--wa);color:#063b1c}
 .mbar a.q{background:var(--navy);color:#fff}
 @media (min-width:900px){.mbar{display:none}}
+
+/* top switches */
+.top .w{justify-content:space-between}
+.top .tl{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.top .sw{display:flex;gap:8px;align-items:center}
+.seg{display:inline-flex;background:rgba(255,255,255,.12);border-radius:999px;padding:2px}
+.seg button{border:0;background:none;color:#cfe0ff;font:700 .74rem var(--font);padding:4px 9px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed=true]{background:#fff;color:var(--navy)}
+@media (max-width:699px){.top .w{justify-content:space-between}.top .tl>span:first-child{font-size:.78rem}}
+@media (max-width:699px){.seg .cn{display:none}}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+/* recruitment */
+.rec{display:grid;gap:28px}
+@media (min-width:980px){.rec{grid-template-columns:1fr 1.1fr;align-items:start;gap:48px}}
+.perks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.perks li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-weight:600}
+.perks .i{color:var(--green);stroke-width:3;margin-top:2px}
+.rf-t{font-size:1.25rem;color:var(--navy);margin-bottom:16px}
+/* gallery */
+.gal{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.ba-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ba-card figcaption{padding:14px 18px;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;gap:10px}
+.ba-card figcaption small{color:var(--muted);font-weight:500}
+.ba{position:relative;aspect-ratio:4/3;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:pan-y;--p:50%}
+.ba>div,.ba>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .af{clip-path:inset(0 0 0 var(--p))}
+.ba .lab{position:absolute;top:12px;font:800 .72rem var(--font);letter-spacing:.08em;padding:5px 10px;border-radius:999px;background:rgba(13,27,51,.7);color:#fff;z-index:2}
+.ba .lab.l{left:12px}.ba .lab.r{right:12px;background:var(--green)}
+.ba .hd{position:absolute;top:0;bottom:0;left:var(--p);width:3px;margin-left:-1.5px;background:#fff;z-index:2;pointer-events:none;box-shadow:0 0 12px rgba(0,0,0,.3)}
+.ba .hd::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:800;box-shadow:var(--shadow)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:3;margin:0}
+.ph-b{background:radial-gradient(circle at 20% 30%,rgba(90,70,40,.35) 0 6%,transparent 7%),radial-gradient(circle at 70% 60%,rgba(90,70,40,.3) 0 9%,transparent 10%),radial-gradient(circle at 45% 80%,rgba(90,70,40,.25) 0 5%,transparent 6%),linear-gradient(160deg,#b9ad97,#8f8471)}
+.ph-a{background:radial-gradient(circle at 25% 25%,#fff 0 1.5%,transparent 2%),radial-gradient(circle at 75% 40%,#fff 0 1%,transparent 1.5%),linear-gradient(160deg,#eaf4ff,#bfe3cf)}
+.ph-t{display:grid;place-items:center;color:rgba(13,27,51,.55);font-weight:700;font-size:.9rem}
+.ph-b.ph-t{justify-items:start;padding-left:8%;color:rgba(255,255,255,.85)}.ph-a.ph-t{justify-items:end;padding-right:8%}
+/* reviews */
+.revs{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.rev{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px}
+.rev .stars{color:#f5a524;letter-spacing:2px;font-size:1.05rem}
+.rev p{color:var(--ink)}
+.rev b{color:var(--navy)}.rev small{color:var(--muted);display:block}
+.rev.ph{opacity:.7;border-style:dashed}
+footer .lnk{background:none;border:0;color:#cfe0ff;font:inherit;padding:0;cursor:pointer}
+footer .lnk:hover{color:#fff}
+footer .legal{display:flex;gap:16px}
+.demo-note{background:#fff8e1;color:#7a5b00;border:1px dashed #e0b84a;border-radius:14px;padding:10px 14px;font-size:.85rem;font-weight:600;margin-bottom:18px}
 /* chat widget */
 .cbtn{position:fixed;right:16px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:55;width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(140deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(11,58,134,.4);transition:transform .2s}
 .cbtn:hover{transform:scale(1.06)}
@@ -371,12 +421,17 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
   </defs>
 </svg>
 
+<a class="skip" href="#top">Aller au contenu</a>
 <div class="top"><div class="w">
-  <span>✨ Devis personnalisé et rapide</span>
+  <span class="tl"><span>✨ Devis personnalisé et rapide</span>
   <span class="hide-s">·</span>
-  <span class="hide-s">WhatsApp <a href="#" data-wa>01 96 62 99 95</a></span>
+  <span class="hide-s">WhatsApp <a href="#" data-wa><span data-wa-txt>01 96 62 99 95</span></a></span>
   <span class="hide-s">·</span>
-  <span class="hide-s">Appel direct <a href="tel:+2290162185982">01 62 18 59 82</a></span>
+  <span class="hide-s">Appel direct <a href="tel:+2290162185982" data-tel><span data-tel-txt>01 62 18 59 82</span></a></span></span>
+  <span class="sw">
+    <span class="seg" id="ctrySw" role="group" aria-label="Pays" hidden></span>
+    <span class="seg" role="group" aria-label="Langue / Language"><button type="button" data-lang="fr" lang="fr">FR</button><button type="button" data-lang="en" lang="en">EN</button></span>
+  </span>
 </div></div>
 
 <header><div class="w nav">
@@ -390,10 +445,11 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
     <a href="#devis">Devis express</a>
     <a href="#methode">Méthode</a>
     <a href="#faq">FAQ</a>
+    <a href="#recrutement">Recrutement</a>
     <a href="#contact">Contact</a>
   </nav>
   <div class="act">
-    <a class="btn g sm call" href="tel:+2290162185982"><svg class="i"><use href="#phone"/></svg>Appeler</a>
+    <a class="btn g sm call" href="tel:+2290162185982" data-tel><svg class="i"><use href="#phone"/></svg>Appeler</a>
     <a class="btn wa sm" href="#" data-wa><svg class="i f"><use href="#wa"/></svg>WhatsApp</a>
   </div>
 </div></header>
@@ -608,6 +664,27 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
   </div>
 </section>
 
+<section id="realisations" hidden>
+  <div class="w">
+    <div class="sh rv">
+      <span class="kick">Nos réalisations</span>
+      <h2>Avant / après : jugez par vous-même</h2>
+      <p>Faites glisser le curseur pour voir la différence.</p>
+    </div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section id="avis" class="alt" hidden>
+  <div class="w">
+    <div class="sh c rv">
+      <span class="kick">Avis clients</span>
+      <h2>Ils nous font confiance</h2>
+    </div>
+    <div class="revs" id="revs"></div>
+  </div>
+</section>
+
 <section id="faq">
   <div class="w">
     <div class="sh c rv">
@@ -615,7 +692,7 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
       <h2>Tout ce que vous voulez savoir</h2>
     </div>
     <div class="faq">
-      <details class="rv"><summary>Comment obtenir un devis ?</summary><p>Le plus rapide : remplissez le <a href="#devis">devis express</a> ou envoyez-nous un message WhatsApp au 01 96 62 99 95 avec quelques photos du lieu. Vous pouvez aussi nous appeler directement au 01 62 18 59 82.</p></details>
+      <details class="rv"><summary>Comment obtenir un devis ?</summary><p>Le plus rapide : remplissez le <a href="#devis">devis express</a> ou envoyez-nous un message WhatsApp au <span data-wa-txt>01 96 62 99 95</span> avec quelques photos du lieu. Vous pouvez aussi nous appeler directement au <span data-tel-txt>01 62 18 59 82</span>.</p></details>
       <details class="rv"><summary>Le devis est-il payant ?</summary><p>Non. La demande de devis est gratuite et sans engagement.</p></details>
       <details class="rv"><summary>Faut-il fournir les produits et le matériel ?</summary><p>Non, notre équipe vient avec son matériel et ses produits professionnels. Si vous souhaitez que nous utilisions vos propres produits (allergies, préférences), indiquez-le simplement dans votre demande.</p></details>
       <details class="rv"><summary>Dois-je être présent pendant le nettoyage ?</summary><p>Ce n'est pas obligatoire. Beaucoup de clients nous confient l'accès (clés, gardien) et retrouvent leur espace propre en rentrant. Nous convenons ensemble des modalités.</p></details>
@@ -627,6 +704,39 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
   </div>
 </section>
 
+<section id="recrutement">
+  <div class="w rec">
+    <div class="rv">
+      <div class="sh" style="margin-bottom:22px">
+        <span class="kick">Recrutement</span>
+        <h2>Rejoignez l'équipe Chavé</h2>
+        <p>Vous êtes sérieux, ponctuel et aimez le travail bien fait ? Nous recherchons régulièrement des agents d'entretien, avec ou sans expérience.</p>
+      </div>
+      <ul class="perks">
+        <li><svg class="i"><use href="#check"/></svg>Formation aux bons gestes et au matériel professionnel</li>
+        <li><svg class="i"><use href="#check"/></svg>Missions chez des particuliers et en entreprise</li>
+        <li><svg class="i"><use href="#check"/></svg>Temps plein, temps partiel ou week-end</li>
+        <li><svg class="i"><use href="#check"/></svg>Une équipe soudée et respectueuse</li>
+      </ul>
+    </div>
+    <form class="qf rv" id="rf" novalidate>
+      <h3 class="rf-t">Postuler en 1 minute</h3>
+      <div class="fields">
+        <label class="fld">Nom et prénom *<input id="r-nom" autocomplete="name" required></label>
+        <label class="fld">Téléphone *<input id="r-tel" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <label class="fld">Ville / quartier<input id="r-ville" autocomplete="address-level2"></label>
+        <label class="fld">Poste souhaité<select id="r-poste"><option>Agent(e) d'entretien</option><option>Laveur / laveuse de vitres</option><option>Chef d'équipe</option><option>Autre</option></select></label>
+        <label class="fld">Expérience<select id="r-exp"><option>Débutant(e)</option><option>Moins de 2 ans</option><option>2 à 5 ans</option><option>Plus de 5 ans</option></select></label>
+        <label class="fld">Disponibilité<select id="r-dispo"><option>Temps plein</option><option>Temps partiel</option><option>Week-end</option><option>Missions ponctuelles</option></select></label>
+        <label class="fld full">Quelques mots sur vous<textarea id="r-msg" placeholder="Votre parcours, vos points forts, votre date de disponibilité…"></textarea></label>
+      </div>
+      <p class="err" id="rErr" hidden>Merci d'indiquer votre nom et votre téléphone.</p>
+      <button class="btn wa block" type="submit" style="margin-top:16px"><svg class="i f"><use href="#wa"/></svg>Envoyer ma candidature</button>
+      <p class="hint" style="margin-top:10px;text-align:center">Votre candidature s'ouvre dans WhatsApp, prête à envoyer.</p>
+    </form>
+  </div>
+</section>
+
 <section id="contact" class="alt">
   <div class="w">
     <div class="sh rv">
@@ -635,8 +745,8 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
       <p>Choisissez le moyen qui vous arrange. Nous vous répondons rapidement.</p>
     </div>
     <div class="ct">
-      <a class="cc rv" href="#" data-wa><span class="ic" style="background:#dcfce7;color:#128c3e"><svg class="i f"><use href="#wa"/></svg></span><small>WhatsApp</small><b>01 96 62 99 95</b><span>Messages, photos, devis</span></a>
-      <a class="cc rv" href="tel:+2290162185982"><span class="ic c-b"><svg class="i"><use href="#phone"/></svg></span><small>Appel direct</small><b>01 62 18 59 82</b><span>Pour parler à quelqu'un tout de suite</span></a>
+      <a class="cc rv" href="#" data-wa><span class="ic" style="background:#dcfce7;color:#128c3e"><svg class="i f"><use href="#wa"/></svg></span><small>WhatsApp</small><b><span data-wa-txt>01 96 62 99 95</span></b><span>Messages, photos, devis</span></a>
+      <a class="cc rv" href="tel:+2290162185982" data-tel><span class="ic c-b"><svg class="i"><use href="#phone"/></svg></span><small>Appel direct</small><b><span data-tel-txt>01 62 18 59 82</span></b><span>Pour parler à quelqu'un tout de suite</span></a>
       <a class="cc rv" href="mailto:pro.contact.chave@gmail.com?subject=Demande%20Chav%C3%A9"><span class="ic c-v"><svg class="i"><use href="#mail"/></svg></span><small>E-mail</small><b style="font-size:1rem">pro.contact.chave@gmail.com</b><span>Devis d'entreprise, appels d'offres</span></a>
       <button class="cc rv" id="vcard" type="button"><span class="ic c-g"><svg class="i"><use href="#contact"/></svg></span><small>Carnet d'adresses</small><b>Enregistrer Chavé</b><span>Ajoutez nos numéros en un geste</span></button>
     </div>
@@ -659,15 +769,15 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
         <p style="margin-top:14px">Service d'entretien et de nettoyage professionnel pour particuliers et entreprises.</p>
       </div>
       <div><h4>Services</h4><ul><li><a href="#services">Bureaux &amp; locaux</a></li><li><a href="#services">Maisons &amp; appartements</a></li><li><a href="#services">Après travaux / déménagement</a></li><li><a href="#services">Vitres &amp; surfaces vitrées</a></li><li><a href="#services">Entretien régulier ou ponctuel</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="#" data-wa>WhatsApp : 01 96 62 99 95</a></li><li><a href="tel:+2290162185982">Appel : 01 62 18 59 82</a></li><li><a href="mailto:pro.contact.chave@gmail.com">pro.contact.chave@gmail.com</a></li></ul></div>
-      <div><h4>Raccourcis</h4><ul><li><a href="#devis">Devis express</a></li><li><a href="#pieces">Pièce par pièce</a></li><li><a href="#faq">Questions fréquentes</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="#" data-wa>WhatsApp : <span data-wa-txt>01 96 62 99 95</span></a></li><li><a href="tel:+2290162185982" data-tel>Appel : <span data-tel-txt>01 62 18 59 82</span></a></li><li><a href="mailto:pro.contact.chave@gmail.com">pro.contact.chave@gmail.com</a></li></ul></div>
+      <div><h4>Raccourcis</h4><ul><li><a href="#devis">Devis express</a></li><li><a href="#pieces">Pièce par pièce</a></li><li><a href="#faq">Questions fréquentes</a></li><li><a href="#recrutement">Recrutement</a></li><li><button type="button" class="lnk" id="install" hidden>📲 Installer l'appli</button></li></ul></div>
     </div>
-    <div class="bot"><span>© <span id="yr">2026</span> Chavé · Tous droits réservés</span><span>Votre espace, notre priorité.</span></div>
+    <div class="bot"><span>© <span id="yr">2026</span> Chavé · Tous droits réservés</span><span class="legal"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></span></div>
   </div>
 </footer>
 
 <nav class="mbar" aria-label="Actions rapides">
-  <a href="tel:+2290162185982"><svg class="i"><use href="#phone"/></svg>Appeler</a>
+  <a href="tel:+2290162185982" data-tel><svg class="i"><use href="#phone"/></svg>Appeler</a>
   <a class="wa" href="#" data-wa><svg class="i f"><use href="#wa"/></svg>WhatsApp</a>
   <a class="q" href="#devis"><svg class="i"><use href="#spark"/></svg>Devis express</a>
 </nav>
@@ -684,45 +794,106 @@ footer .bot{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,2
 <script>
 (function(){
 "use strict";
-var WA="2290196629995", TEL="+2290162185982", MAIL="pro.contact.chave@gmail.com";
+/* ================== RÉGLAGES (à modifier facilement) ================== */
+var MAIL="pro.contact.chave@gmail.com";
+/* Pays : un pays s'affiche dans le sélecteur dès que wa ET tel sont remplis */
+var COUNTRIES={
+  bj:{fr:"Bénin",en:"Benin",flag:"🇧🇯",wa:"2290196629995",waTxt:"01 96 62 99 95",tel:"+2290162185982",telTxt:"01 62 18 59 82",ex:"Cotonou, Fidjrossè",tz:"Africa/Porto-Novo"},
+  cm:{fr:"Cameroun",en:"Cameroon",flag:"🇨🇲",wa:"",waTxt:"",tel:"",telTxt:"",ex:"Douala, Bonapriso",tz:"Africa/Douala"}
+};
+/* Galerie avant/après : {titre:"Bureaux – Cotonou", lieu:"Open space", avant:"img/avant-1.jpg", apres:"img/apres-1.jpg"} */
+var GALLERY=[];
+/* Avis clients : {nom:"Aïcha", lieu:"Cotonou", texte:"…", note:5} */
+var REVIEWS=[];
+/* ===================================================================== */
+
 var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
-var ico=function(id,cls){return '<svg class="i'+(cls?' '+cls:'')+'"><use href="#'+id+'"/></svg>'};
-function waLink(t){return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
-function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},2600)}
+var params=new URLSearchParams(location.search), DEMO=params.has("demo");
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- langue ---------- */
+var L=(params.get("lang")||store("chave-lang")||"fr").toLowerCase()==="en"?"en":"fr";
+function T(s){return (L==="en"&&window.EN&&window.EN[s])||s}
+function boot(){
+  if(L==="en"&&!window.EN){var sc=document.createElement("script");sc.src="en.js";sc.onload=init;sc.onerror=function(){L="fr";init()};document.head.appendChild(sc)}
+  else init();
+}
+function translateStatic(){
+  if(L!=="en")return;
+  document.documentElement.lang="en";
+  document.title=T(document.title);
+  var md=$('meta[name=description]');if(md)md.content=T(md.content);
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;if(!p||/^(SCRIPT|STYLE)$/.test(p.nodeName)||p.closest("svg"))return 2;return n.nodeValue.trim()?1:2}});
+  var nodes=[],n;while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){var v=n.nodeValue,k=v.trim().replace(/\s+/g," ");if(window.EN[k]){var m=v.match(/^\s*/)[0],e=v.match(/\s*$/)[0];n.nodeValue=m+window.EN[k]+e}});
+  $$("[placeholder],[aria-label],[title]").forEach(function(el){["placeholder","aria-label","title"].forEach(function(a){var v=el.getAttribute(a);if(v&&window.EN[v])el.setAttribute(a,window.EN[v])})});
+  $$("option").forEach(function(o){if(!o.hasAttribute("value"))o.value=o.textContent});
+}
+
+/* ---------- pays ---------- */
+function ready(c){return COUNTRIES[c]&&COUNTRIES[c].wa&&COUNTRIES[c].tel}
+var READY=Object.keys(COUNTRIES).filter(ready);
+function detect(){
+  var q=(params.get("pays")||params.get("country")||"").toLowerCase();if(ready(q))return q;
+  var sv=store("chave-pays");if(ready(sv))return sv;
+  try{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone;for(var k in COUNTRIES)if(ready(k)&&COUNTRIES[k].tz===tz)return k}catch(e){}
+  return READY[0]||"bj";
+}
+var CC=detect(), C=function(){return COUNTRIES[CC]};
+function waLink(t){return "https://wa.me/"+C().wa+"?text="+encodeURIComponent(t)}
+function DEFAULT_WA(){return T("Bonjour Chavé 👋, je souhaite des informations sur vos services de nettoyage.")}
+function applyCountry(){
+  var c=C();
+  $$("[data-wa]").forEach(function(a){a.href=waLink(DEFAULT_WA());a.target="_blank";a.rel="noopener"});
+  $$("[data-tel]").forEach(function(a){a.href="tel:"+c.tel});
+  $$("[data-wa-txt]").forEach(function(e){e.textContent=c.waTxt});
+  $$("[data-tel-txt]").forEach(function(e){e.textContent=c.telTxt});
+  var lt=$("#lieuTxt");if(lt)lt.placeholder=T("Ex. : ")+c.ex;
+  $$("#ctrySw button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.c===CC)});
+}
+
+function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},2800)}
+var ico=function(id){return '<svg class="i"><use href="#'+id+'"/></svg>'};
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+function init(){
+translateStatic();
 $("#yr").textContent=new Date().getFullYear();
 
-/* generic WhatsApp links */
-var DEFAULT_WA="Bonjour Chavé 👋, je souhaite des informations sur vos services de nettoyage.";
-$$("[data-wa]").forEach(function(a){a.href=waLink(DEFAULT_WA);a.target="_blank";a.rel="noopener"});
+/* switches */
+$$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L);b.addEventListener("click",function(){if(b.dataset.lang===L)return;store("chave-lang",b.dataset.lang);var u=new URL(location.href);u.searchParams.delete("lang");if(b.dataset.lang==="en")u.searchParams.set("lang","en");location.href=u.toString()})});
+if(READY.length>1){var sw=$("#ctrySw");sw.hidden=false;sw.innerHTML=READY.map(function(k){return '<button type="button" data-c="'+k+'" title="'+COUNTRIES[k][L]+'">'+COUNTRIES[k].flag+'<span class="cn"> '+COUNTRIES[k][L]+'</span></button>'}).join("");
+  sw.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;CC=b.dataset.c;store("chave-pays",CC);applyCountry();toast(T("Numéros affichés pour : ")+C()[L])})}
+applyCountry();
 
-/* hero: live mission animation */
+/* hero mission */
 var MISSIONS=[
   {t:"Intervention · Bureaux",s:"Open space, 12 postes",k:["Postes de travail désinfectés","Sols aspirés et lavés","Sanitaires nettoyés","Poubelles vidées"]},
   {t:"Intervention · Appartement",s:"3 pièces, grand ménage",k:["Cuisine dégraissée","Salle de bain détartrée","Chambres dépoussiérées","Sols lavés"]},
   {t:"Intervention · Après travaux",s:"Villa, fin de chantier",k:["Gravats et poussières évacués","Traces de peinture retirées","Vitres lavées","Sols récurés"]}
 ];
-var mi=0, reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var mi=0;
 function runMission(){
-  var m=MISSIONS[mi%MISSIONS.length]; mi++;
-  $("#mTitle").textContent=m.t; $("#mSub").textContent=m.s;
-  $("#mTasks").innerHTML=m.k.map(function(x){return '<div class="task"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17l9-10"/></svg></span><span>'+x+'</span><em></em></div>'}).join("");
-  var tasks=$$("#mTasks .task"), i=0;
+  var m=MISSIONS[mi%MISSIONS.length];mi++;
+  $("#mTitle").textContent=T(m.t);$("#mSub").textContent=T(m.s);
+  $("#mTasks").innerHTML=m.k.map(function(x){return '<div class="task"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17l9-10"/></svg></span><span>'+esc(T(x))+'</span><em></em></div>'}).join("");
+  var tasks=$$("#mTasks .task"),i=0;
   function set(p){$("#mBar").style.width=p+"%";$("#mPct").textContent=p+" %"}
   set(0);
   if(reduce){tasks.forEach(function(t){t.classList.add("done")});set(100);return}
   function next(){
-    if(i>0){tasks[i-1].classList.remove("now");tasks[i-1].classList.add("done");tasks[i-1].querySelector("em").textContent="fait"}
+    if(i>0){tasks[i-1].classList.remove("now");tasks[i-1].classList.add("done");tasks[i-1].querySelector("em").textContent=T("fait")}
     set(Math.round(i/tasks.length*100));
-    if(i<tasks.length){tasks[i].classList.add("now");tasks[i].querySelector("em").textContent="en cours…";i++;setTimeout(next,1300)}
+    if(i<tasks.length){tasks[i].classList.add("now");tasks[i].querySelector("em").textContent=T("en cours…");i++;setTimeout(next,1300)}
     else setTimeout(runMission,2600);
   }
   setTimeout(next,600);
 }
 runMission();
-/* soap bubbles */
 (function(){var v=$(".vis");if(!v||reduce)return;for(var k=0;k<7;k++){var b=document.createElement("span");b.className="bub";var s=10+Math.random()*26;b.style.cssText="width:"+s+"px;height:"+s+"px;left:"+(Math.random()*100)+"%;bottom:"+(-10+Math.random()*30)+"%;animation-delay:"+(-Math.random()*9)+"s;animation-duration:"+(7+Math.random()*5)+"s";v.appendChild(b)}})();
 
-/* rooms checklist */
+/* rooms */
 var ROOMS=[
   {id:"cuisine",n:"Cuisine",d:"Le cœur de la maison, là où l'hygiène compte le plus.",k:["Plans de travail nettoyés et désinfectés","Évier et robinetterie détartrés","Façades des placards essuyées","Plaques et hotte dégraissées","Extérieur des appareils (frigo, four, micro-ondes)","Poubelles vidées, sacs remplacés","Sol balayé et lavé"],x:"En option : intérieur du réfrigérateur, du four ou des placards."},
   {id:"sdb",n:"Salle de bain & WC",d:"Détartrage et désinfection de toutes les surfaces.",k:["Douche, baignoire et parois détartrées","Lavabo et robinetterie lustrés","WC nettoyés et désinfectés","Miroirs sans traces","Carrelage mural essuyé","Sol lavé et désinfecté"],x:"Produits anticalcaire adaptés à votre eau."},
@@ -732,12 +903,12 @@ var ROOMS=[
   {id:"chantier",n:"Après travaux",d:"La remise à neuf après les artisans ou avant un emménagement.",k:["Évacuation des poussières de chantier","Retrait des traces de peinture, ciment, colle","Nettoyage des menuiseries et prises","Vitres et encadrements","Sanitaires et cuisine remis à neuf","Sols lavés en profondeur"],x:"Idéal avant une remise de clés ou une mise en location."}
 ];
 var tabs=$("#tabs");
-tabs.innerHTML=ROOMS.map(function(r,i){return '<button class="tab" role="tab" id="t-'+r.id+'" aria-controls="panel" aria-selected="'+(i===0)+'" tabindex="'+(i===0?0:-1)+'" data-i="'+i+'">'+r.n+'<span class="n">'+r.k.length+'</span></button>'}).join("");
+tabs.innerHTML=ROOMS.map(function(r,i){return '<button class="tab" role="tab" id="t-'+r.id+'" aria-controls="panel" aria-selected="'+(i===0)+'" tabindex="'+(i===0?0:-1)+'" data-i="'+i+'">'+esc(T(r.n))+'<span class="n">'+r.k.length+'</span></button>'}).join("");
 function showRoom(i){
   var r=ROOMS[i];
   $$(".tab",tabs).forEach(function(t,j){t.setAttribute("aria-selected",j===i);t.tabIndex=j===i?0:-1});
   $("#panel").setAttribute("aria-labelledby","t-"+r.id);
-  $("#panel").innerHTML='<h3>'+r.n+'</h3><p>'+r.d+'</p><ul class="cl">'+r.k.map(function(x,j){return '<li style="animation-delay:'+(j*40)+'ms">'+ico("check")+x+'</li>'}).join("")+'</ul><div class="foot"><span>'+r.x+'</span><a class="btn p sm" href="#devis">Demander un devis '+ico("arrow")+'</a></div>';
+  $("#panel").innerHTML='<h3>'+esc(T(r.n))+'</h3><p>'+esc(T(r.d))+'</p><ul class="cl">'+r.k.map(function(x,j){return '<li style="animation-delay:'+(j*40)+'ms">'+ico("check")+esc(T(x))+'</li>'}).join("")+'</ul><div class="foot"><span>'+esc(T(r.x))+'</span><a class="btn p sm" href="#devis">'+T("Demander un devis")+' '+ico("arrow")+'</a></div>';
 }
 tabs.addEventListener("click",function(e){var b=e.target.closest(".tab");if(b)showRoom(+b.dataset.i)});
 tabs.addEventListener("keydown",function(e){var c=$$(".tab",tabs),i=c.indexOf(document.activeElement);if(i<0)return;var n=e.key==="ArrowRight"||e.key==="ArrowDown"?i+1:e.key==="ArrowLeft"||e.key==="ArrowUp"?i-1:null;if(n===null)return;e.preventDefault();n=(n+c.length)%c.length;c[n].focus();showRoom(n)});
@@ -748,68 +919,60 @@ var SVC=[["bureaux","🏢","Bureaux / locaux pros","Open space, cabinet, boutiqu
 var LIEU=[["Appartement","🏢"],["Maison / villa","🏡"],["Bureau","💼"],["Commerce","🏪"],["Immeuble / résidence","🏬"],["Autre","✳️"]];
 var FREQ=[["Une seule fois","1×"],["Chaque semaine","Hebdo"],["Plusieurs fois / semaine","2–5×"],["Chaque jour","Quotidien"],["Chaque mois","Mensuel"]];
 var EXT=["Intérieur du frigo","Intérieur du four","Placards intérieurs","Canapés / fauteuils","Balcon / terrasse","Désinfection complète","Produits fournis par moi"];
-function opt(name,type,val,label,small,emoji){var id=name+"-"+val.replace(/\W+/g,"");return '<div class="opt"><input type="'+type+'" name="'+name+'" id="'+id+'" value="'+val+'"><label for="'+id+'">'+(emoji?'<span class="e">'+emoji+'</span>':'')+label+(small?'<small>'+small+'</small>':'')+'</label></div>'}
+function opt(name,type,val,label,small,emoji){var id=name+"-"+val.replace(/\W+/g,"");return '<div class="opt"><input type="'+type+'" name="'+name+'" id="'+id+'" value="'+esc(val)+'"><label for="'+id+'">'+(emoji?'<span class="e">'+emoji+'</span>':'')+esc(T(label))+(small?'<small>'+esc(T(small))+'</small>':'')+'</label></div>'}
 $("#o-svc").innerHTML=SVC.map(function(s){return opt("svc","checkbox",s[0],s[2],s[3],s[1])}).join("");
 $("#o-lieu").innerHTML=LIEU.map(function(s){return opt("lieu","radio",s[0],s[0],"",s[1])}).join("");
 $("#o-freq").innerHTML=FREQ.map(function(s){return opt("freq","radio",s[0],s[0],s[1])}).join("");
 $("#o-ext").innerHTML=EXT.map(function(s){return opt("ext","checkbox",s,s)}).join("");
 var CNT=[["pieces","Pièces"],["sdb","Salles de bain"],["niv","Niveaux"]];
-$("#cnts").innerHTML=CNT.map(function(c){return '<div class="cnt"><span>'+c[1]+'</span><button type="button" data-c="'+c[0]+'" data-d="-1" aria-label="Moins de '+c[1].toLowerCase()+'">−</button><output id="c-'+c[0]+'">0</output><button type="button" data-c="'+c[0]+'" data-d="1" aria-label="Plus de '+c[1].toLowerCase()+'">+</button></div>'}).join("");
+$("#cnts").innerHTML=CNT.map(function(c){var l=T(c[1]);return '<div class="cnt"><span>'+esc(l)+'</span><button type="button" data-c="'+c[0]+'" data-d="-1" aria-label="'+esc(T("Moins")+" : "+l)+'">−</button><output id="c-'+c[0]+'">0</output><button type="button" data-c="'+c[0]+'" data-d="1" aria-label="'+esc(T("Plus")+" : "+l)+'">+</button></div>'}).join("");
 var counts={pieces:0,sdb:0,niv:0};
 $("#cnts").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var k=b.dataset.c;counts[k]=Math.max(0,Math.min(50,counts[k]+(+b.dataset.d)));$("#c-"+k).textContent=counts[k];update()});
 var dt=$("#date");dt.min=new Date().toISOString().slice(0,10);
-
 var SVCN={};SVC.forEach(function(s){SVCN[s[0]]=s[2]});
-function state(){
-  var f=$("#qf");
-  return {
-    svc:$$('input[name=svc]:checked',f).map(function(i){return SVCN[i.value]}),
-    lieu:(($('input[name=lieu]:checked',f)||{}).value)||"",
-    freq:(($('input[name=freq]:checked',f)||{}).value)||"",
-    ext:$$('input[name=ext]:checked',f).map(function(i){return i.value}),
-    surf:+$("#surf").value, counts:Object.assign({},counts),
-    date:dt.value, slot:$("#slot").value, ville:$("#lieuTxt").value.trim(), nom:$("#nom").value.trim(), msg:$("#msg").value.trim()
-  };
-}
-function fmtDate(v){if(!v)return"";var d=new Date(v+"T12:00:00");return d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}
-function sizeTxt(s){var a=[];if(s.counts.pieces)a.push(s.counts.pieces+" pièce"+(s.counts.pieces>1?"s":""));if(s.counts.sdb)a.push(s.counts.sdb+" sdb");if(s.counts.niv)a.push(s.counts.niv+" niveau"+(s.counts.niv>1?"x":""));if(s.surf)a.push("≈ "+s.surf+(s.surf>=1000?"+":"")+" m²");return a.join(" · ")}
+function state(){var f=$("#qf");return{
+  svc:$$('input[name=svc]:checked',f).map(function(i){return T(SVCN[i.value])}),
+  lieu:T((($('input[name=lieu]:checked',f)||{}).value)||""),
+  freq:T((($('input[name=freq]:checked',f)||{}).value)||""),
+  ext:$$('input[name=ext]:checked',f).map(function(i){return T(i.value)}),
+  surf:+$("#surf").value,counts:Object.assign({},counts),
+  date:dt.value,slot:$("#slot").value,ville:$("#lieuTxt").value.trim(),nom:$("#nom").value.trim(),msg:$("#msg").value.trim()}}
+function fmtDate(v){if(!v)return"";var d=new Date(v+"T12:00:00");return d.toLocaleDateString(L==="en"?"en-GB":"fr-FR",{weekday:"long",day:"numeric",month:"long"})}
+function plural(n,a,b){return n+" "+T(n>1?b:a)}
+function sizeTxt(s){var a=[];if(s.counts.pieces)a.push(plural(s.counts.pieces,"pièce","pièces"));if(s.counts.sdb)a.push(plural(s.counts.sdb,"salle de bain","salles de bain"));if(s.counts.niv)a.push(plural(s.counts.niv,"niveau","niveaux"));if(s.surf)a.push("≈ "+s.surf+(s.surf>=1000?"+":"")+" m²");return a.join(" · ")}
 function update(){
   var s=state();
-  $("#surfO").textContent=s.surf?("≈ "+s.surf+(s.surf>=1000?"+":"")+" m²"):"Surface ?";
+  $("#surfO").textContent=s.surf?("≈ "+s.surf+(s.surf>=1000?"+":"")+" m²"):T("Surface ?");
   var rows=[["Service",s.svc.join(", ")],["Lieu",s.lieu],["Taille",sizeTxt(s)],["Fréquence",s.freq],["Options",s.ext.join(", ")],["Date",[fmtDate(s.date),s.slot].filter(Boolean).join(" · ")],["Où",s.ville],["Nom",s.nom]];
-  $("#qSum").innerHTML=rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd class="'+(r[1]?"":"empty")+'">'+(r[1]?esc(r[1]):"—")+'</dd></div>'}).join("");
-  var keys=[s.svc.length,s.lieu,sizeTxt(s),s.freq,s.date||s.slot,s.ville,s.nom], done=keys.filter(Boolean).length, pct=Math.round(done/keys.length*100);
+  $("#qSum").innerHTML=rows.map(function(r){return '<div><dt>'+T(r[0])+'</dt><dd class="'+(r[1]?"":"empty")+'">'+(r[1]?esc(r[1]):"—")+'</dd></div>'}).join("");
+  var keys=[s.svc.length,s.lieu,sizeTxt(s),s.freq,s.date||s.slot,s.ville,s.nom],done=keys.filter(Boolean).length,pct=Math.round(done/keys.length*100);
   $("#qBar").style.width=pct+"%";
-  $("#qTxt").textContent=!s.svc.length?"Commencez par choisir un service":pct<100?"Demande complète à "+pct+" % — plus c'est précis, plus le devis est juste":"Parfait, votre demande est complète ✓";
+  $("#qTxt").textContent=!s.svc.length?T("Commencez par choisir un service"):pct<100?T("Demande complète à ")+pct+T(" % — plus c'est précis, plus le devis est juste"):T("Parfait, votre demande est complète ✓");
   if(s.svc.length)$("#qErr").hidden=true;
   save();
 }
-function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function message(){
-  var s=state(),L=["Bonjour Chavé 👋","Je souhaite un devis :",""];
-  L.push("🧽 Service : "+s.svc.join(", "));
-  if(s.lieu)L.push("📍 Lieu : "+s.lieu);
-  if(sizeTxt(s))L.push("📐 Taille : "+sizeTxt(s));
-  if(s.freq)L.push("🔁 Fréquence : "+s.freq);
-  if(s.ext.length)L.push("➕ Options : "+s.ext.join(", "));
-  if(s.date||s.slot)L.push("📅 Quand : "+[fmtDate(s.date),s.slot].filter(Boolean).join(", "));
-  if(s.ville)L.push("🗺️ Ville / quartier : "+s.ville);
-  if(s.msg)L.push("","📝 "+s.msg);
-  L.push("",s.nom?("— "+s.nom):"Merci !");
-  return L.join("\n");
+  var s=state(),Ls=[T("Bonjour Chavé 👋"),T("Je souhaite un devis :"),""];
+  Ls.push("🧽 "+T("Service")+" : "+s.svc.join(", "));
+  if(s.lieu)Ls.push("📍 "+T("Lieu")+" : "+s.lieu);
+  if(sizeTxt(s))Ls.push("📐 "+T("Taille")+" : "+sizeTxt(s));
+  if(s.freq)Ls.push("🔁 "+T("Fréquence")+" : "+s.freq);
+  if(s.ext.length)Ls.push("➕ "+T("Options")+" : "+s.ext.join(", "));
+  if(s.date||s.slot)Ls.push("📅 "+T("Quand")+" : "+[fmtDate(s.date),s.slot].filter(Boolean).join(", "));
+  if(s.ville)Ls.push("🗺️ "+T("Ville / quartier")+" : "+s.ville);
+  if(READY.length>1)Ls.push("🌍 "+T("Pays")+" : "+C()[L]);
+  if(s.msg)Ls.push("","📝 "+s.msg);
+  Ls.push("",s.nom?("— "+s.nom):T("Merci !"));
+  return Ls.join("\n");
 }
-function valid(){if(!state().svc.length){$("#qErr").hidden=false;$("#o-svc").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});toast("Choisissez d'abord un service");return false}return true}
+function valid(){if(!state().svc.length){$("#qErr").hidden=false;$("#o-svc").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});toast(T("Choisissez d'abord un service"));return false}return true}
 $("#sendWa").addEventListener("click",function(){if(!valid())return;window.open(waLink(message()),"_blank","noopener")});
-$("#sendMail").addEventListener("click",function(){if(!valid())return;location.href="mailto:"+MAIL+"?subject="+encodeURIComponent("Demande de devis – "+state().svc.join(", "))+"&body="+encodeURIComponent(message())});
+$("#sendMail").addEventListener("click",function(){if(!valid())return;location.href="mailto:"+MAIL+"?subject="+encodeURIComponent(T("Demande de devis – ")+state().svc.join(", "))+"&body="+encodeURIComponent(message())});
 $("#qf").addEventListener("input",update);$("#qf").addEventListener("change",update);
-
-/* service buttons prefill */
-$$("[data-svc]").forEach(function(b){b.addEventListener("click",function(){var i=$("#svc-"+b.dataset.svc);if(i){i.checked=true;update()}$("#devis").scrollIntoView({behavior:reduce?"auto":"smooth"});toast("Service ajouté à votre demande ✓")})});
-
-/* draft persistence (this device only) */
+$$("[data-svc]").forEach(function(b){b.addEventListener("click",function(){var i=$("#svc-"+b.dataset.svc);if(i){i.checked=true;update()}$("#devis").scrollIntoView({behavior:reduce?"auto":"smooth"});toast(T("Service ajouté à votre demande ✓"))})});
 var KEY="chave-devis";
-function save(){try{var s=state();localStorage.setItem(KEY,JSON.stringify({svc:$$('input[name=svc]:checked').map(function(i){return i.value}),lieu:s.lieu,freq:s.freq,ext:s.ext,surf:s.surf,counts:s.counts,date:s.date,slot:s.slot,ville:s.ville,nom:s.nom,msg:s.msg}))}catch(e){}}
-(function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(!d)return;
+function save(){try{var s=state();localStorage.setItem(KEY,JSON.stringify({svc:$$('input[name=svc]:checked').map(function(i){return i.value}),lieu:(($('input[name=lieu]:checked')||{}).value)||"",freq:(($('input[name=freq]:checked')||{}).value)||"",ext:$$('input[name=ext]:checked').map(function(i){return i.value}),surf:s.surf,counts:s.counts,date:s.date,slot:s.slot,ville:s.ville,nom:s.nom,msg:s.msg}))}catch(e){}}
+(function(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(!d)return;
   (d.svc||[]).forEach(function(v){var i=$("#svc-"+v);if(i)i.checked=true});
   $$('input[name=lieu]').forEach(function(i){i.checked=i.value===d.lieu});
   $$('input[name=freq]').forEach(function(i){i.checked=i.value===d.freq});
@@ -819,24 +982,50 @@ function save(){try{var s=state();localStorage.setItem(KEY,JSON.stringify({svc:$
 }catch(e){}})();
 update();
 
+/* recruitment */
+$("#rf").addEventListener("submit",function(e){
+  e.preventDefault();var g=function(id){return $("#"+id).value.trim()};
+  if(!g("r-nom")||!g("r-tel")){$("#rErr").hidden=false;(g("r-nom")?$("#r-tel"):$("#r-nom")).focus();return}
+  $("#rErr").hidden=true;
+  var m=[T("Bonjour Chavé 👋"),T("Je souhaite postuler :"),"","👤 "+g("r-nom"),"📞 "+g("r-tel")];
+  if(g("r-ville"))m.push("📍 "+g("r-ville"));
+  m.push("💼 "+T("Poste")+" : "+g("r-poste"),"⭐ "+T("Expérience")+" : "+g("r-exp"),"🕒 "+T("Disponibilité")+" : "+g("r-dispo"));
+  if(READY.length>1)m.push("🌍 "+T("Pays")+" : "+C()[L]);
+  if(g("r-msg"))m.push("","📝 "+g("r-msg"));
+  window.open(waLink(m.join("\n")),"_blank","noopener");
+});
+
+/* gallery & reviews */
+(function(){
+  var items=GALLERY.length?GALLERY:(DEMO?[{titre:"Exemple – bureaux",lieu:"Photo à venir"},{titre:"Exemple – après travaux",lieu:"Photo à venir"}]:[]);
+  if(items.length){
+    var sec=$("#realisations");sec.hidden=false;
+    $("#gal").innerHTML=(GALLERY.length?"":'<p class="demo-note">'+T("Aperçu : les vraies photos avant / après seront ajoutées ici.")+'</p>')+items.map(function(it){
+      var b=it.avant?'<img src="'+esc(it.avant)+'" alt="'+esc(T("Avant")+" – "+it.titre)+'" loading="lazy">':'<div class="ph-b ph-t">'+T("Photo avant")+'</div>';
+      var a=it.apres?'<img class="af" src="'+esc(it.apres)+'" alt="'+esc(T("Après")+" – "+it.titre)+'" loading="lazy">':'<div class="af ph-a ph-t">'+T("Photo après")+'</div>';
+      return '<figure class="ba-card rv in" style="margin:0"><div class="ba">'+b+a+'<span class="lab l">'+T("AVANT")+'</span><span class="lab r">'+T("APRÈS")+'</span><span class="hd"></span><input type="range" min="0" max="100" value="50" aria-label="'+esc(T("Comparer avant et après"))+'"></div><figcaption>'+esc(T(it.titre))+'<small>'+esc(T(it.lieu||""))+'</small></figcaption></figure>'}).join("");
+    $$("#gal .ba input").forEach(function(r){r.addEventListener("input",function(){r.parentNode.style.setProperty("--p",r.value+"%")})});
+  }
+  var rv=REVIEWS.length?REVIEWS:(DEMO?[{nom:"Prénom du client",lieu:"Quartier",texte:"Ici s'affichera un véritable avis client.",note:5,ph:1},{nom:"Entreprise cliente",lieu:"Ville",texte:"Ici s'affichera un véritable avis client.",note:5,ph:1},{nom:"Prénom du client",lieu:"Quartier",texte:"Ici s'affichera un véritable avis client.",note:5,ph:1}]:[]);
+  if(rv.length){$("#avis").hidden=false;$("#revs").innerHTML=rv.map(function(r){return '<div class="rev rv in'+(r.ph?" ph":"")+'"><span class="stars" aria-label="'+r.note+'/5">'+"★★★★★".slice(0,r.note||5)+'</span><p>« '+esc(T(r.texte))+' »</p><div><b>'+esc(T(r.nom))+'</b><small>'+esc(T(r.lieu))+'</small></div></div>'}).join("")}
+})();
+
 /* vCard */
 $("#vcard").addEventListener("click",function(){
-  var v=["BEGIN:VCARD","VERSION:3.0","FN:Chavé – Nettoyage","ORG:Chavé","TITLE:Service d'entretien et de nettoyage","TEL;TYPE=CELL,VOICE:+229 01 96 62 99 95","TEL;TYPE=WORK,VOICE:+229 01 62 18 59 82","EMAIL;TYPE=WORK:"+MAIL,"NOTE:WhatsApp : 01 96 62 99 95 – Appel direct : 01 62 18 59 82. La propreté qui fait la différence.","END:VCARD"].join("\r\n");
+  var c=C(),cc=c.wa.slice(0,3);
+  var v=["BEGIN:VCARD","VERSION:3.0","FN:Chavé – "+T("Nettoyage"),"ORG:Chavé","TITLE:"+T("Service d'entretien et de nettoyage"),"TEL;TYPE=CELL,VOICE:+"+cc+" "+c.waTxt,"TEL;TYPE=WORK,VOICE:"+c.tel,"EMAIL;TYPE=WORK:"+MAIL,"URL:"+location.href.split(/[?#]/)[0],"NOTE:WhatsApp : "+c.waTxt+" – "+T("Appel direct")+" : "+c.telTxt,"END:VCARD"].join("\r\n");
   var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([v],{type:"text/vcard;charset=utf-8"}));a.download="Chave.vcf";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);
-  toast("Contact Chavé téléchargé — ouvrez-le pour l'enregistrer");
+  toast(T("Contact Chavé téléchargé — ouvrez-le pour l'enregistrer"));
 });
-
 /* share */
 $("#share").addEventListener("click",function(){
-  var d={title:"Chavé – Nettoyage & entretien",text:"Chavé : nettoyage de bureaux, maisons, vitres et après travaux. WhatsApp 01 96 62 99 95",url:location.href.split("#")[0]};
-  if(navigator.share){navigator.share(d).catch(function(){})}
-  else{window.open(waLink(d.text+" — "+d.url),"_blank","noopener")}
+  var d={title:T("Chavé – Nettoyage & entretien"),text:T("Chavé : nettoyage de bureaux, maisons, vitres et après travaux.")+" WhatsApp "+C().waTxt,url:location.href.split("#")[0]};
+  if(navigator.share)navigator.share(d).catch(function(){});else window.open("https://wa.me/?text="+encodeURIComponent(d.text+" — "+d.url),"_blank","noopener");
 });
-
 
 /* chat assistant */
 (function(){
-var btn=$("#cbtn"),box=$("#chat"),body=$("#cbody"),qr=$("#cqr"),form=$("#cform"),inp=$("#cin"),tease=$("#tease"),started=false,lastQ="";
+var btn=$("#cbtn"),box=$("#chat"),body=$("#cbody"),qr=$("#cqr"),form=$("#cform"),inp=$("#cin"),tease=$("#tease"),started=false;
 var KB={
  devis:{l:"📝 Un devis",a:"Avec plaisir ! Le plus rapide, c'est notre devis express : en 1 minute vous décrivez votre lieu et votre besoin, et la demande arrive complète chez nous.\n\nVous pouvez aussi me décrire votre besoin ici, je le transmets à l'équipe.",x:[["Faire mon devis express","#devis"]]},
  services:{l:"🧽 Vos services",a:"Nous proposons :\n• Nettoyage de bureaux et locaux professionnels\n• Entretien de maisons et appartements\n• Nettoyage après travaux ou déménagement\n• Lavage de vitres et surfaces vitrées\n• Entretien régulier ou ponctuel\n\nUn besoin particulier ? Décrivez-le, nous trouvons une solution.",x:[["Voir le détail","#services"]]},
@@ -844,26 +1033,26 @@ var KB={
  produits:{l:"🧴 Produits & matériel",a:"Notre équipe vient avec son matériel et ses produits professionnels, adaptés à chaque surface. Si vous préférez vos propres produits (allergies, préférences), dites-le-nous simplement."},
  zone:{l:"📍 Zones & horaires",a:"Indiquez-nous votre ville et votre quartier, ainsi que le jour souhaité : nous vous confirmons rapidement la disponibilité. Pour les entreprises, nous pouvons intervenir tôt le matin, le soir ou le week-end."},
  regulier:{l:"📅 Contrat régulier",a:"Oui ! Quotidien, plusieurs fois par semaine, hebdomadaire ou mensuel : le planning s'adapte à vos horaires et peut évoluer selon vos besoins."},
+ emploi:{l:"💼 Recrutement",a:"Vous souhaitez rejoindre l'équipe ? Remplissez notre formulaire de candidature, il s'envoie directement sur WhatsApp.",x:[["Postuler","#recrutement"]]},
  humain:{l:"👤 Parler à quelqu'un",a:"Bien sûr ! Écrivez-nous directement sur WhatsApp ou appelez-nous, un membre de l'équipe vous répond.",x:[["WhatsApp","wa"],["Appeler","tel"]]}
 };
-var RX=[[/devis|estimation|estimer|cotation/i,"devis"],[/prix|tarif|combien|co[uû]t|cher|fcfa|budget/i,"prix"],[/produit|mat[ée]riel|aspirateur|allerg/i,"produits"],[/zone|quartier|ville|o[uù] |horaire|heure|dimanche|samedi|week|soir|dispo|quand/i,"zone"],[/r[ée]gulier|contrat|chaque semaine|mensuel|abonnement|quotidien/i,"regulier"],[/service|bureau|maison|appart|vitre|travaux|chantier|d[ée]m[ée]nag|nettoy/i,"services"],[/humain|quelqu|personne|appeler|t[ée]l[ée]phone|conseiller|whatsapp/i,"humain"]];
+var RX=[[/devis|estimation|estimer|cotation|quote|estimate/i,"devis"],[/prix|tarif|combien|co[uû]t|cher|fcfa|budget|price|cost|how much|rate/i,"prix"],[/emploi|travail|postul|recrut|embauch|job|work for|hiring|apply|career/i,"emploi"],[/produit|mat[ée]riel|aspirateur|allerg|product|equipment|supplies/i,"produits"],[/zone|quartier|ville|o[uù] |horaire|heure|dimanche|samedi|week|soir|dispo|quand|area|city|where|hour|sunday|saturday|evening|when|available/i,"zone"],[/r[ée]gulier|contrat|chaque semaine|mensuel|abonnement|quotidien|regular|contract|weekly|monthly|daily/i,"regulier"],[/service|bureau|maison|appart|vitre|travaux|chantier|d[ée]m[ée]nag|nettoy|office|house|home|window|cleaning|clean|move/i,"services"],[/humain|quelqu|personne|appeler|t[ée]l[ée]phone|conseiller|whatsapp|human|someone|person|call|phone|agent/i,"humain"]];
 function scroll(){body.scrollTop=body.scrollHeight}
 function add(txt,who,acts){var m=document.createElement("div");m.className="m "+who;m.textContent=txt;
-  if(acts&&acts.length){var a=document.createElement("div");a.className="acts";acts.forEach(function(x){var e=document.createElement("a");e.className="btn sm "+(x[1]==="wa"?"wa":"p");e.textContent=x[0];
-    if(x[1]==="wa"){e.href=waLink(x[2]||DEFAULT_WA);e.target="_blank";e.rel="noopener"}else if(x[1]==="tel"){e.href="tel:"+TEL}else{e.href=x[1];e.addEventListener("click",close)}a.appendChild(e)});m.appendChild(a)}
+  if(acts&&acts.length){var a=document.createElement("div");a.className="acts";acts.forEach(function(x){var e=document.createElement("a");e.className="btn sm "+(x[1]==="wa"?"wa":"p");e.textContent=T(x[0]);
+    if(x[1]==="wa"){e.href=waLink(x[2]||DEFAULT_WA());e.target="_blank";e.rel="noopener"}else if(x[1]==="tel"){e.href="tel:"+C().tel}else{e.href=x[1];e.addEventListener("click",close)}a.appendChild(e)});m.appendChild(a)}
   body.appendChild(m);scroll()}
-function bot(txt,acts,cb){var t=document.createElement("div");t.className="m b typing";t.innerHTML="<i></i><i></i><i></i>";body.appendChild(t);scroll();
-  setTimeout(function(){t.remove();add(txt,"b",acts);cb&&cb()},reduce?0:Math.min(1400,500+txt.length*6))}
-function chips(){qr.innerHTML="";Object.keys(KB).forEach(function(k){var b=document.createElement("button");b.type="button";b.textContent=KB[k].l;b.onclick=function(){ask(KB[k].l,k)};qr.appendChild(b)})}
-function ask(label,k){add(label,"u");var e=KB[k];bot(e.a,e.x)}
-function free(t){add(t,"u");lastQ=t;var k=null;for(var i=0;i<RX.length;i++){if(RX[i][0].test(t)){k=RX[i][1];break}}
-  var msg="Bonjour Chavé 👋\n"+t;
+function bot(txt,acts){txt=T(txt);var t=document.createElement("div");t.className="m b typing";t.innerHTML="<i></i><i></i><i></i>";body.appendChild(t);scroll();
+  setTimeout(function(){t.remove();add(txt,"b",acts)},reduce?0:Math.min(1400,500+txt.length*6))}
+function chips(){qr.innerHTML="";Object.keys(KB).forEach(function(k){var b=document.createElement("button");b.type="button";b.textContent=T(KB[k].l);b.onclick=function(){add(T(KB[k].l),"u");bot(KB[k].a,KB[k].x)};qr.appendChild(b)})}
+function free(t){add(t,"u");var k=null;for(var i=0;i<RX.length;i++){if(RX[i][0].test(t)){k=RX[i][1];break}}
+  var msg=T("Bonjour Chavé 👋")+"\n"+t;
   if(k&&k!=="humain"){var e=KB[k];bot(e.a,(e.x||[]).concat([["Envoyer ma question à l'équipe","wa",msg]]))}
   else bot("Merci pour votre message ! Je le transmets à l'équipe sur WhatsApp pour une réponse personnalisée. Appuyez sur le bouton ci-dessous, votre message est déjà rédigé.",[["Envoyer sur WhatsApp","wa",msg],["Appeler","tel"]])}
-function open(){box.hidden=false;btn.setAttribute("aria-expanded","true");btn.setAttribute("aria-label","Fermer la discussion");tease.hidden=true;$("#cbadge").hidden=true;
-  if(!started){started=true;chips();var h=new Date().getHours();bot((h<12?"Bonjour":h<18?"Bonjour":"Bonsoir")+" 👋 Je suis l'assistant Chavé.\nComment puis-je vous aider ? Choisissez un sujet ci-dessous ou écrivez votre question.")}
+function open(){box.hidden=false;btn.setAttribute("aria-expanded","true");btn.setAttribute("aria-label",T("Fermer la discussion"));tease.hidden=true;$("#cbadge").hidden=true;
+  if(!started){started=true;chips();var h=new Date().getHours();bot(T(h<18?"Bonjour":"Bonsoir")+T(" 👋 Je suis l'assistant Chavé.\nComment puis-je vous aider ? Choisissez un sujet ci-dessous ou écrivez votre question."))}
   if(window.matchMedia("(min-width:900px)").matches)setTimeout(function(){inp.focus()},300)}
-function close(){box.hidden=true;btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-label","Ouvrir la discussion")}
+function close(){box.hidden=true;btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-label",T("Ouvrir la discussion"))}
 btn.addEventListener("click",function(){box.hidden?open():close()});
 $("#cclose").addEventListener("click",close);
 tease.addEventListener("click",open);
@@ -871,9 +1060,22 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!box.hidden
 form.addEventListener("submit",function(e){e.preventDefault();var t=inp.value.trim();if(!t)return;inp.value="";free(t)});
 setTimeout(function(){if(!started&&box.hidden){tease.hidden=false;setTimeout(function(){tease.hidden=true},9000)}},6000);
 })();
+
+/* app install (PWA) */
+(function(){
+  var ib=$("#install"),deferred=null,ios=/iphone|ipad|ipod/i.test(navigator.userAgent),standalone=window.matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+  if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("sw.js").catch(function(){});
+  if(standalone)return;
+  window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferred=e;ib.hidden=false});
+  if(ios)ib.hidden=false;
+  ib.addEventListener("click",function(){if(deferred){deferred.prompt();deferred=null;ib.hidden=true}else toast(T("Sur iPhone : touchez Partager, puis « Sur l'écran d'accueil »"))});
+})();
+
 /* reveal on scroll */
-if("IntersectionObserver" in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});$$(".rv").forEach(function(el){io.observe(el)})}
+if("IntersectionObserver" in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});$$(".rv:not(.in)").forEach(function(el){io.observe(el)})}
 else $$(".rv").forEach(function(el){el.classList.add("in")});
+}
+boot();
 })();
 </script>
 </body>

@@ -520,5 +520,20 @@ window.EN={
 "Équipe Chavé sur un chantier":"Chavé team on a building site",
 "L'équipe Chavé en intervention":"The Chavé team at work",
 "12 agents formés · Cotonou et environs":"12 trained staff · Cotonou and surroundings",
-"Chavé – Service d'entretien – La propreté qui fait la différence":"Chavé – Cleaning services – Cleanliness that makes the difference"
+"Chavé – Service d'entretien – La propreté qui fait la différence":"Chavé – Cleaning services – Cleanliness that makes the difference",
+"Références":"References",
+"Des entreprises nous font déjà confiance":"Businesses already trust us",
+"Depuis août 2026, nous assurons l'entretien des locaux d'entreprises à Cotonou. Elles en témoignent par écrit.":"Since August 2026, we have been cleaning business premises in Cotonou. They confirm it in writing.",
+"Extrait de l'attestation de bonne fin d'exécution délivrée par Eurêka Multi-Services":"Excerpt of the certificate of satisfactory completion issued by Eurêka Multi-Services",
+"Extrait de l'attestation de bonne fin d'exécution délivrée par AX-ADAH SARL":"Excerpt of the certificate of satisfactory completion issued by AX-ADAH SARL",
+"📄 Attestation · 12/10/2026":"📄 Certificate · 12/10/2026",
+"📄 Attestation · 19/10/2026":"📄 Certificate · 19/10/2026",
+"« La société CHAVE SARL a fait preuve de sérieux, de disponibilité et de professionnalisme dans l'accomplissement des missions qui lui sont confiées. »":"“CHAVE SARL has shown reliability, availability and professionalism in carrying out the tasks entrusted to it.”",
+"« Ces prestations ont été réalisées avec diligence, professionnalisme et dans le respect des exigences convenues. »":"“These services were carried out diligently, professionally and in line with the agreed requirements.”",
+"Direction générale · Entretien régulier des locaux depuis août 2026":"Management · Regular office cleaning since August 2026",
+"Direction générale · Nettoyage et entretien des locaux depuis août 2026":"Management · Office cleaning and maintenance since August 2026",
+"Attestations complètes disponibles sur demande.":"Full certificates available on request.",
+"Nous écrire →":"Message us →",
+"Chavé sur TikTok":"Chavé on TikTok",
+"Chavé sur Instagram":"Chavé on Instagram"
 };
